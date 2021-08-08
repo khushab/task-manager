@@ -3,6 +3,7 @@ import Signup from "./pages/signup/Signup";
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from "./pages/Home";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   const dispatch = useDispatch()
@@ -10,15 +11,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
+          <ProtectedRoute exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
         </Switch>
       </div>
     </Router>

@@ -7,8 +7,8 @@
   align-items: center;
   background: #f0f2f5;
   h2 {
-    margin-top: -5rem;
-    margin-bottom: 3rem;
+    margin-top: -7rem;
+    margin-bottom: 2rem;
     color: #166fe5;
     font-size: 2.5rem;
     font-weight: bold;
@@ -49,6 +49,17 @@
         cursor: pointer;
       }
       #create-account {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        border: none;
+        padding: 0.6rem 0rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border: none;
+        text-decoration: none;
+        text-align: center;
+
         width: 70%;
         background: #42b72a;
         padding: 1rem;

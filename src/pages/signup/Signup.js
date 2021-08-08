@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Signup.scss'
+import { NavLink as Link } from 'react-router-dom'
 
 const Signup = () => {
 
@@ -48,6 +49,10 @@ const Signup = () => {
                     </div>
                     <div className="form-group">
                         <button type='submit'>Sign Up</button>
+                    </div>
+                    <div className="line"></div>
+                    <div className="form-group">
+                        <Link to="/login" id="login">Login</Link>
                     </div>
                 </form>
             </div>

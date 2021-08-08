@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Login.scss'
+import { NavLink as Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -42,7 +43,7 @@ const Login = () => {
                 </div>
                 <div className="line"></div>
                 <div className="form-group">
-                    <button id="create-account">Create New Account</button>
+                    <Link to="/signup" id="create-account">Create New Account</Link>
                 </div>
             </form>
         </div>

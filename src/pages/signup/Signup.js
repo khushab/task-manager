@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import './Signup.scss'
-import { NavLink as Link } from 'react-router-dom'
+import { NavLink as Link, Redirect } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Signup = () => {
+    const auth = useSelector(state => state.isLogged)
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -17,6 +19,7 @@ const Signup = () => {
 
     return (
         <div>
+            {auth ? <Redirect to="/" /> : null}
             <div className="signup">
                 <h2>Task Manager</h2>
                 <form onSubmit={submitHandler} className="signup-form">

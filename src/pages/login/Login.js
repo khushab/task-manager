@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.scss'
-import { NavLink as Link } from 'react-router-dom'
+import { NavLink as Link, Redirect } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Login = () => {
+    const auth = useSelector(state => state.isLogged)
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -18,6 +20,7 @@ const Login = () => {
 
     return (
         <div className="login">
+            {auth ? <Redirect to="/" /> : null}
             <h2>Task Manager</h2>
             <form onSubmit={submitHandler} className="login-form">
                 <div className="form-group">

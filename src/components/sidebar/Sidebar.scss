@@ -1,0 +1,50 @@
+.sidebar {
+  z-index: 99;
+  width: 7rem;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  transition: 0.5s ease;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    h2 {
+      font-size: 1rem;
+    }
+    .close {
+      cursor: pointer;
+      width: 1rem;
+    }
+  }
+}
+
+.hidden {
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  li {
+    list-style: none;
+    margin: 0.2rem;
+  }
+  a {
+    width: 100%;
+    display: inline-block;
+    padding: 0.3rem 0.3rem;
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 0.2rem;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

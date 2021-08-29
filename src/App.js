@@ -2,7 +2,8 @@ import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
+import Sidebar from './components/sidebar/Sidebar'
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Sidebar />
         <Switch>
           <ProtectedRoute exact path="/" component={Home} />
           <Route path="/login" component={Login} />

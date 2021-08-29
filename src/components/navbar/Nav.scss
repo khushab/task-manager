@@ -2,18 +2,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0rem 1rem;
+  padding: 0.5rem 1rem;
   background-color: black;
   color: white;
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   h4 {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 
   .menu-icon {
-    width: 1rem;
+    width: 1.5rem;
     cursor: pointer;
   }
 }

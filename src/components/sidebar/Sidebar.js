@@ -23,8 +23,7 @@ const Sidebar = () => {
             <ul className="nav-list">
                 <li>
                     <Link
-                        to="/"
-                        exact={true}
+                        to="/allTasks"
                         activeClassName="active"
                     >
                         All tasks
@@ -32,7 +31,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/pendingTasks"
                         activeClassName="active"
                     >
                         Pending Task
@@ -40,7 +39,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/completedTasks"
                         activeClassName="active"
                     >
                         Completed Task
@@ -48,7 +47,7 @@ const Sidebar = () => {
                 </li>
                 <li>
                     <Link
-                        to="/"
+                        to="/notes"
                         activeClassName="active"
                     >
                         Notes

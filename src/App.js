@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar />
         <Switch>
           <ProtectedRoute exact path="/" component={Home} />
           <Route path="/login" component={Login} />

@@ -2,19 +2,29 @@ import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from "./pages/Home/Home";
 import Sidebar from './components/sidebar/Sidebar'
 import ProtectedRoute from "./components/ProtectedRoute";
+import AllTasks from "./components/allTasks/AllTasks";
+import PendingTasks from "./components/pendingTasks/PendingTasks";
+import Nav from "./components/navbar/Nav";
 
 function App() {
   const dispatch = useDispatch()
+  const auth = useSelector(state => state.isLogged)
   return (
     <Router>
       <div className="App">
+        {auth && <Sidebar />}
+        {auth && <Nav />}
         <Switch>
-          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/" name="home" component={AllTasks} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
+          {/* <Route path="/" exact={true}>
+            <Redirect to="/allTasks" />
+          </Route> */}
+          <ProtectedRoute path="/allTasks" component={AllTasks} />
+          <ProtectedRoute path="/pendingTasks" component={PendingTasks} />
         </Switch>
       </div>
     </Router>

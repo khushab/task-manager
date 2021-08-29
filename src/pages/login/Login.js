@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Login.scss'
 import { NavLink as Link, Redirect } from 'react-router-dom'
 import { useSelector } from 'react-redux'

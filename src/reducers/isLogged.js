@@ -1,4 +1,4 @@
-const initialState = false
+const initialState = true
 
 const loggedReducer = (state = initialState, action) => {
     switch (action.type) {
